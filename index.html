@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+   <link rel="stylesheet" href="css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/academy.css">
+</head>
+
+<body class="container-fluid">
+    <div id="header" class="container-fluid">
+        <img id="logo" src="img/logo-academy-white.png">
+    </div>
+    <div class="container-fluid main-container">
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed acbutton" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Tipos de Display
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <form>
+                                   <h4>Displays mais comuns:</h4>
+                                    <input type="radio" id="none" name="displays" value="none">
+                                    <label for="none">none</label><br>
+                                    <input type="radio" id="inline" name="displays" value="inline" checked="checked">
+                                    <label for="inline">inline</label><br>
+                                    <input type="radio" id="block" name="displays" value="block">
+                                    <label for="block">block</label><br>
+                                    <input type="radio" id="inline-block" name="displays" value="inline-block">
+                                    <label for="inline-block">inline-block</label><br>
+                                    <input type="radio" id="flex" name="displays" value="flex">
+                                    <label for="flex">flex</label><br>
+                                </form>
+                                <form id="flex-direction" style="display:none">
+                                   <h4>flex-direction:</h4>
+                                    <input type="radio" id="column" name="direction" value="column">
+                                    <label for="column">column</label><br>
+                                    <input type="radio" id="column-reverse" name="direction" value="column-reverse">
+                                    <label for="column-reverse">column-reverse</label><br>
+                                    <input type="radio" id="row" name="direction" value="row" checked="true">
+                                    <label for="row">row</label><br>
+                                    <input type="radio" id="row-reverse" name="direction" value="row-reverse">
+                                    <label for="row-reverse">row-reverse</label><br>
+                                </form>
+                                <form id="justify" style="display:none">
+                                   <h4>justify-content:</h4>
+                                    <input type="radio" id="center" name="justify" value="center">
+                                    <label for="center">center</label><br>
+                                    <input type="radio" id="flex-start" name="justify" value="flex-start" checked="true">
+                                    <label for="flex-start">flex-start</label><br>
+                                    <input type="radio" id="flex-end" name="justify" value="flex-end">
+                                    <label for="flex-end">flex-end</label><br>
+                                    <input type="radio" id="space-around" name="justify" value="space-around">
+                                    <label for="space-around">space-around</label><br>
+                                    <input type="radio" id="space-between" name="justify" value="space-between">
+                                    <label for="space-between">space-between</label><br>
+                                    <input type="radio" id="space-evenly" name="justify" value="space-evenly">
+                                    <label for="space-evenly">space-evenly</label><br>
+                                </form>      
+                                <form id="alignitems" style="display:none">
+                                   <h4>align-items:</h4>
+                                    <input type="radio" id="center2" name="alignitems" value="center">
+                                    <label for="center2">center</label><br>
+                                    <input type="radio" id="flex-start2" name="alignitems" value="flex-start">
+                                    <label for="flex-start2">flex-start</label><br>
+                                    <input type="radio" id="flex-end2" name="alignitems" value="flex-end">
+                                    <label for="flex-end2">flex-end</label><br>
+                                    <input type="radio" id="strech" name="alignitems" value="strech">
+                                    <label for="strech">strech</label><br>
+                                    <input type="radio" id="baseline" name="alignitems" value="baseline">
+                                    <label for="baseline">baseline</label><br>
+                                </form>
+                            </div>
+                            <div class="col-6">
+                                <div id="exflex" class="flex-container">
+                                    <div style="height: 50px; display: flex; align-items: center;">1</div>
+                                    <div style="height: 50px; display: flex; align-items: center;">2</div>
+                                    <div style="height: 50px; display: flex; align-items: center;">3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed acbutton" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Propriedades de Elemento
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed acbutton" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Estados e Pseudo-Seletores
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="scripts/academy.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+body {
+    background-image: linear-gradient(to right top, #001489, #001799, #001aaa, #001cbb, #001fcc);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.container-fluid.main-container {
+    width: 90%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 50px;
+    padding: 2%;
+}
+
+#logo {
+    margin: 2% 0 1vh 5%;
+    max-width: 130px;
+    opacity: 0.4;
+}
+
+#accordion {}
+
+.card {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 200px;
+}
+
+.acbutton {
+    transition: 0.3s ease all;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.05em;
+    color: #000;
+    text-decoration: none;
+}
+
+.acbutton:focus {
+    text-decoration: none;
+}
+
+.acbutton:hover {
+    color: #001489;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex-container {
+    background-color: #E91E63;
+    flex-wrap: wrap;
+}
+
+.flex-container div {
+    background-color: #80deea;     
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+h5{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.fa-star{
+    font-size:12px;
+    color:#dabe5d;
+  }
+
+#exflex{
+    position: sticky;
+    top: 10px;
+    width: 100%;
+    height: 60vh;
+}
