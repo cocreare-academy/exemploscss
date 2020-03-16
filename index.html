@@ -2,7 +2,7 @@
 <html lang="ptbr">
 
 <head>
-   <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/academy.css">
@@ -27,36 +27,52 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-6">
+                               <h4>Número de caixas:<span id="demo"></span></h4>
+                                <div class="slidecontainer" style="display:flex;">
+                                    <input type="range" min="1" max="8" value="8" class="slider" id="ChildCount">
+                                    
+                                </div>
                                 <form>
-                                   <h4>Displays mais comuns:</h4>
+                                    <h4>Displays mais comuns:</h4>
                                     <input type="radio" id="none" name="displays" value="none">
                                     <label for="none">none</label><br>
-                                    <input type="radio" id="inline" name="displays" value="inline" checked="checked">
+                                    <input type="radio" id="inline" name="displays" value="inline">
                                     <label for="inline">inline</label><br>
-                                    <input type="radio" id="block" name="displays" value="block">
+                                    <input type="radio" id="block" name="displays" value="block" checked="true">
                                     <label for="block">block</label><br>
                                     <input type="radio" id="inline-block" name="displays" value="inline-block">
                                     <label for="inline-block">inline-block</label><br>
                                     <input type="radio" id="flex" name="displays" value="flex">
                                     <label for="flex">flex</label><br>
                                 </form>
+                                <form id="wraptype" style="display:none">
+                                    <h4>flex-wrap:</h4>
+                                    <h5>quebra de linha da flexbox</h5>
+                                    <input type="radio" id="nowrap" name="wraptype" value="nowrap" checked="true">
+                                    <label for="nowrap">nowrap <i>(default)</i></label><br>
+                                    <input type="radio" id="wrap" name="wraptype" value="wrap">
+                                    <label for="wrap">wrap</label><br>
+                                    <input type="radio" id="wrap-reverse" name="wraptype" value="wrap-reverse">
+                                    <label for="wrap-reverse">wrap-reverse</label><br>
+                                </form>
                                 <form id="flex-direction" style="display:none">
-                                   <h4>flex-direction:</h4>
+                                    <h4>flex-direction:</h4>
                                     <input type="radio" id="column" name="direction" value="column">
                                     <label for="column">column</label><br>
                                     <input type="radio" id="column-reverse" name="direction" value="column-reverse">
                                     <label for="column-reverse">column-reverse</label><br>
                                     <input type="radio" id="row" name="direction" value="row" checked="true">
-                                    <label for="row">row</label><br>
+                                    <label for="row">row <i>(default)</i></label><br>
                                     <input type="radio" id="row-reverse" name="direction" value="row-reverse">
                                     <label for="row-reverse">row-reverse</label><br>
                                 </form>
                                 <form id="justify" style="display:none">
-                                   <h4>justify-content:</h4>
+                                    <h4>justify-content:</h4>
+                                    <h5>alinhamento do eixo principal</h5>
                                     <input type="radio" id="center" name="justify" value="center">
                                     <label for="center">center</label><br>
                                     <input type="radio" id="flex-start" name="justify" value="flex-start" checked="true">
-                                    <label for="flex-start">flex-start</label><br>
+                                    <label for="flex-start">flex-start <i>(default)</i></label><br>
                                     <input type="radio" id="flex-end" name="justify" value="flex-end">
                                     <label for="flex-end">flex-end</label><br>
                                     <input type="radio" id="space-around" name="justify" value="space-around">
@@ -65,33 +81,39 @@
                                     <label for="space-between">space-between</label><br>
                                     <input type="radio" id="space-evenly" name="justify" value="space-evenly">
                                     <label for="space-evenly">space-evenly</label><br>
-                                </form>      
+                                </form>
                                 <form id="alignitems" style="display:none">
-                                   <h4>align-items:</h4>
+                                    <h4>align-items:</h4>
+                                    <h5>alinhamento do eixo secundário</h5>
                                     <input type="radio" id="center2" name="alignitems" value="center">
                                     <label for="center2">center</label><br>
                                     <input type="radio" id="flex-start2" name="alignitems" value="flex-start">
                                     <label for="flex-start2">flex-start</label><br>
                                     <input type="radio" id="flex-end2" name="alignitems" value="flex-end">
                                     <label for="flex-end2">flex-end</label><br>
-                                    <input type="radio" id="strech" name="alignitems" value="strech">
-                                    <label for="strech">strech</label><br>
+                                    <input type="radio" id="stretch" name="alignitems" value="stretch" checked="true">
+                                    <label for="stretch">stretch <i>(default)</i></label><br>
                                     <input type="radio" id="baseline" name="alignitems" value="baseline">
                                     <label for="baseline">baseline</label><br>
                                 </form>
                             </div>
                             <div class="col-6">
                                 <div id="exflex" class="flex-container">
-                                    <div style="height: 50px; display: flex; align-items: center;">1</div>
-                                    <div style="height: 50px; display: flex; align-items: center;">2</div>
-                                    <div style="height: 50px; display: flex; align-items: center;">3</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #CC4FFF;">1</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #7448E8;">2</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #5C75FF;">3</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #44A2EB">4</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #4FFCFF">5</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #38EBCB">6</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #3DFFB6">7</div>
+                                    <div class="flex-child" style="height: 50px; align-items: center; background-color: #28EB7A">8</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <!--            <div class="card">
                 <div class="card-header" id="headingTwo">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed acbutton" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -116,7 +138,7 @@
                     <div class="card-body">
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <!--Scripts-->
